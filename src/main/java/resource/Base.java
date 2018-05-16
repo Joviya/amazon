@@ -18,10 +18,15 @@ public class Base {
 	public WebDriver intializeDriver() throws IOException {
 		
 		pro=new Properties();
-		FileInputStream fis=new FileInputStream("data.properties");
+		FileInputStream fis=new FileInputStream("d:\\data.properties");
 		pro.load(fis);
 		
+		
+		
+		
+		
 		String browserName=	pro.getProperty("browser");
+		//String browserName=	"firefox";
 	//	System.out.println(browserName);
 		
 		if(browserName.equals("chrome")) {
