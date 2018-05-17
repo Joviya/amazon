@@ -15,7 +15,7 @@ import pageObject.LoginPage;
 import resource.Base;
 
 public class HomePage extends Base{
-	public static Logger log=LogManager.getLogger(HomePage.class.getName());
+	public static Logger log=LogManager.getLogger(Base.class.getName());
 	
 	@BeforeTest
 
@@ -23,7 +23,7 @@ public class HomePage extends Base{
 		
 		
 		driver=	intializeDriver();
-
+		log.info("driver is intialized" );
 	}
 
 
@@ -32,7 +32,7 @@ public class HomePage extends Base{
 	public void basePageNavigation(String Username,String password) throws IOException {
 
 		driver.get(pro.getProperty("url"));
-		log.info("driver is intialized" );
+		log.info("Navigated to Home page" );
 
 		LandingPage lp= new LandingPage(driver);
 		lp.getLogin().click();
